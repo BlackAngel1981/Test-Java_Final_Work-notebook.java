@@ -11,7 +11,7 @@ public class Main {
         set.add(new Notebook("Notebook 3", 32, "linux", 85000, "Lenovo"));
         set.add(new Notebook("Notebook 4", 64, "linux", 90000, "Lenovo"));
 
-        OperationWithNotebook operation = new OperationWithNotebook(set);
+        Operation operation = new Operation(set);
         operation.start();
 
     }
