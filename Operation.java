@@ -1,10 +1,11 @@
 import java.util.*;
+import java.util.Scanner;
 
-public class OperationWithNotebook {
+public class Operation {
 
     private Set<Notebook> notebooks = new HashSet<>();
     private List<Criterion> criterionList = new ArrayList<>();
-    private static Scanner scanner = new Scanner(System.in);
+    private Scanner scanner = new Scanner(System.in);
 
     public void printList(){
         for (Notebook notebook : notebooks){
@@ -48,12 +49,12 @@ public class OperationWithNotebook {
 
         return true;
     }
-    public OperationWithNotebook(Set<Notebook> notebooks) {
+    public Operation(Set<Notebook> notebooks) {
         this.scanner = new Scanner(System.in);
         this.notebooks = notebooks;
     }
 
-    public OperationWithNotebook(Set<Notebook> notebooks, List<Criterion> criterionList) {
+    public Operation(Set<Notebook> notebooks, List<Criterion> criterionList) {
         this.scanner = new Scanner(System.in);
         this.notebooks = notebooks;
         this.criterionList = criterionList;
@@ -240,7 +241,6 @@ class Criterion {
         System.out.println("Введите значение поиска: ");
         String getValue = scanner.next();
         return new Criterion(property, isQuantitative, getValue, null, null);
-}
+    }
 
-}
 }
